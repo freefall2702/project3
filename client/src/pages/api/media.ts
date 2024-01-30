@@ -3,7 +3,7 @@ import { randomUUID } from "crypto";
 import { NextApiRequest, NextApiResponse } from "next";
 
 const s3 = new S3({
-    apiVersion: "2006-03-01",
+    apiVersion: "2012-10-17",
     accessKeyId: process.env.AWS_ACCESS_KEY_ID,
     secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY,
     region: process.env.AWS_REGION,
@@ -17,7 +17,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const Key = `${randomUUID()}.${ex}`;
 
     const s3Params = {
-        Bucket: 'storage-hw',
+        Bucket: 'user123123',
         Key,
         Expires: 60,
         ContentType: `image/${ex}`,

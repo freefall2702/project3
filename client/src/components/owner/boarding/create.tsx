@@ -1,10 +1,10 @@
-import { Button, Input, InputNumber, Radio, Select, Upload } from "antd"
-import { useState } from "react"
-import { useForm, Controller } from "react-hook-form"
-import axios from "axios";
 import { CITY, DISTRICT, TYPE_OF_BOARDING } from "@/common/config/enum.";
-import toast from "react-hot-toast";
+import { Button, Input, InputNumber, Radio, Select } from "antd";
+import axios from "axios";
 import { useRouter } from "next/router";
+import { useState } from "react";
+import { Controller, useForm } from "react-hook-form";
+import toast from "react-hot-toast";
 
 async function uploadToS3(file: any) {
 
@@ -40,7 +40,7 @@ const BoardingCreateComponent = () => {
     })
 
     const getS3Presigned = (value: string) => {
-        return "https://storage-hw.s3.ap-southeast-1.amazonaws.com/" + value
+        return "https://user123123.s3.ap-southeast-1.amazonaws.com/" + value
     }
     const handleFileChange = async (e: any) => {
         e.preventDefault()

@@ -10,12 +10,13 @@ const requestRoute = require("./routes/requestRoute")
 const authRoute = require("./routes/authRoute")
 require('dotenv').config()
 
+
 const app = express();
 const port = process.env.PORT
 
 const connnectDB = async () => {
     try {
-        await mongoose.connect(`mongodb+srv://trunglvnqt2901:INSxLPdEGiuvdf3A@atlascluster.68xvqu9.mongodb.net/?retryWrites=true&w=majority`, {
+        await mongoose.connect(`mongodb+srv://luynhnm194110:VqOD4o6wInuX1qlO@cluster0.firmglh.mongodb.net/`, {
             useNewUrlParser: true,
             useUnifiedTopology: true,
         })
